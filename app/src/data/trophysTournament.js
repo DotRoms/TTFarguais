@@ -13,8 +13,8 @@ const trophys = [
       { year: 2013, name: "CHATEAUREYNAUD J.", vs: "DUARTE A.J." },
     ],
     image: "/tournaments/tournament_trophy_2013.jpg",
-    alt: "Trophée du tournoi interne de 2013 à 2022",
-    titleTrophy: "Trophée du tournoi interne de 2013 à 2022",
+    alt: "Trophée du tournoi interne depuis 2013",
+    titleTrophy: "Trophée du tournoi interne depuis 2013",
   },
   {
     bio: [

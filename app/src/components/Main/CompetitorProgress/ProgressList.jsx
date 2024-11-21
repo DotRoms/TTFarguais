@@ -13,11 +13,11 @@ const ProgressList = ({ progressFiles }) => {
               <h2 className="font-bold text-lg mb-4 underline underline-offset-8">
                 {file.title}
               </h2>
-              <div className="flex gap-4 flex-wrap justify-around">
+              <div className={`flex ${file.title !== "Mensuelles" ? "flex" : "flex-row-reverse"} gap-4 flex-wrap justify-around`}>
                 {file.category.map((item, index) => (
                   <div key={index} className="flex flex-col mb-6 max-w-60">
                     <h3 className="mb-2 font-bold">{item.name} :</h3>
-                    <div className="flex gap-5 m-auto justify-center">
+                    <div className="flex gap-5 m-auto justify-center ">
                       {item.url && (
                         <ImageAndClick
                           src={cacheBustingUrl(item.url)}

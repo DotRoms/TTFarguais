@@ -1,4 +1,3 @@
-import ButtonCover from "../../UI/ButtonCover"
 export default function Cover(){
   return (
    <section>
@@ -9,7 +8,17 @@ export default function Cover(){
         <div className="relative text-contrast-1 xl:w-4/6">
         <h1 className="text-3xl md:text-5xl uppercase mb-2 md:mb-4 font-bold flex flex-col">Tennis de table <span>Farguais</span></h1>
         <p className=" mb-2 md:mb-4 md:text-2xl"> Plaisir, Passion et Champions !</p>
-        <ButtonCover url='/leclub' title='En savoir plus'></ButtonCover>
+        {/* <ButtonCover url='/leclub' title='En savoir plus'></ButtonCover> */}
+          <button>
+          <a
+        href={"/"}
+        download={`/`}
+        className="text-white py-2 px-4 border rounded-xl hover:bg-white hover:text-black text-sm transition-all"
+        aria-label={`Télécharger`}
+      >
+        Consulter les actualités
+      </a>
+          </button>
         </div>
       </div>
     </section>

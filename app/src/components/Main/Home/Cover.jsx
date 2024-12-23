@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import cacheBustingUrl from "../../../utils/cacheBustingUrl";
 
 export default function Cover() {
     const [newsFile, setNewsFile] = useState(null);
@@ -15,7 +16,6 @@ export default function Cover() {
         fetchNews();
     }, []);
 
-    console.log(newsFile);
     return (
         <section>
             <section className="mb-16">
@@ -30,16 +30,16 @@ export default function Cover() {
                         <h1 className="text-3xl md:text-5xl uppercase mb-2 md:mb-4 font-bold flex flex-col">
                             Tennis de table <span>Farguais</span>
                         </h1>
-                        <p className=" mb-2 md:mb-4 md:text-2xl">
+                        <p className=" mb-2 md:mb-6 md:text-2xl">
                             {" "}
                             Plaisir, Passion et Champions !
                         </p>
                         {/* <ButtonCover url='/leclub' title='En savoir plus'></ButtonCover> */}
-                        <button disabled={newsFile?.url ? false : true}>
+                        <button disabled={newsFile?.url ? false : true} className="flex">
                             <a
-                                href={newsFile?.url}
+                                href={cacheBustingUrl(newsFile?.url)}
                                 target="_blank"
-                                className={` py-2 px-4 border rounded-xl hover:bg-white hover:text-black text-sm transition-all ${
+                                className={` py-3 px-4 border rounded-xl hover:bg-white hover:text-black text-sm transition-all ${
                                     newsFile?.url
                                         ? "text-white border-white"
                                         : "border-gray-400 text-gray-400"

@@ -1,12 +1,10 @@
 import { list } from '@vercel/blob';
 
 export async function GET(request) {
-  const { blobs } = await list();  // Liste tous les blobs
-
-  // Filtrer les blobs pour exclure les dossiers
+  const { blobs } = await list(); 
   const files = blobs.filter(blob => 
-    blob.pathname.includes("Competitor/Season/") &&  blob.pathname.endsWith("jpg")
+    blob.pathname.includes("Competitor/Season/")
   );
 
-  return Response.json(files);  // Renvoie uniquement les blobs (fichiers) en réponse JSON
+  return Response.json(files); 
 }

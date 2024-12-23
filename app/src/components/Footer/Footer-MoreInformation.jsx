@@ -13,16 +13,8 @@ export default function FooterMoreInformation() {
           className="italic"
           target="_blank"
         >
-          Roms
+          DotRoms
         </Link>{" "}
-        &{" "}
-        <Link
-          href="https://www.linkedin.com/in/ugo-matassa/"
-          target="_blank"
-          className="italic"
-        >
-          Barenko
-        </Link>
       </p>
     </div>
   );
